@@ -1,0 +1,5 @@
+## Overview
+
+To handle state updates when the text changed, I used the React Hook called `useCallback` to cache a function between rerenders. For example, I'd set up `handleTextChange` to use a `set` function called `setTextInput` from `useState` (another lightweight React Hook, which ensures the UI remains responsive during rapid text input). When calculating and updating statistics (ex. reading time), I made sure to use conditionals to handle edge cases, such as empty inputs. 
+
+When implementing the statistics calculations, a small challenge I faced was figuring out how I wanted to properly show visual feedback for statistics. I decided on two optional boolean props, `isWordCountValid` and `isReadingTimeValid`, to be passed down to the `StatsDisplay` from the `CharacterCounter` component. Then, any displayed counts would turn red or green if they have or have not met a goal. A message would also switch based on the completion of both goals.

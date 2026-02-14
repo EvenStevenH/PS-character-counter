@@ -1,16 +1,14 @@
 import "./App.css";
 import { CharacterCounter } from "./components/CharacterCounter/CharacterCounter";
 
-function App() {
+export default function App() {
 	return (
 		<>
 			<CharacterCounter
 				minWords={25}
 				maxWords={200}
-				targetReadingTime={.5}
+				targetReadingTime={0.5}
 			/>
 		</>
 	);
 }
-
-export default App;

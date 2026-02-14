@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { TextInputProps } from "../../types";
 
-const TextInput = ({ onTextChange, placeholder = "", initialValue = "" }: TextInputProps) => {
+export default function TextInput({ onTextChange, placeholder = "", initialValue = "" }: TextInputProps) {
 	const [value, setValue] = useState(initialValue);
 
 	const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -12,7 +12,12 @@ const TextInput = ({ onTextChange, placeholder = "", initialValue = "" }: TextIn
 
 	return (
 		<>
-			<label htmlFor="text-input" className="block mb-3 text-xl">Writing Tool</label>
+			<label
+				htmlFor="text-input"
+				className="block mb-3 text-xl"
+			>
+				Writing Tool
+			</label>
 			<textarea
 				value={value}
 				onChange={handleChange}
@@ -23,6 +28,4 @@ const TextInput = ({ onTextChange, placeholder = "", initialValue = "" }: TextIn
 			/>
 		</>
 	);
-};
-
-export default TextInput;
+}

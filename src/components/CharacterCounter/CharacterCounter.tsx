@@ -4,7 +4,7 @@ import StatsDisplay from "../StatsDisplay/StatsDisplay.tsx";
 import TextInput from "../TextInput/TextInput.tsx";
 
 // parent component
-export const CharacterCounter: React.FC<CharacterCounterProps> = ({ minWords = 0, maxWords = 0, targetReadingTime = 0 }) => {
+export default function CharacterCounter({ minWords = 0, maxWords = 0, targetReadingTime = 0 }: CharacterCounterProps) {
 	const [textInput, setTextInput] = useState<string>("");
 
 	// callback
@@ -52,4 +52,4 @@ export const CharacterCounter: React.FC<CharacterCounterProps> = ({ minWords = 0
 			</div>
 		</>
 	);
-};
+}

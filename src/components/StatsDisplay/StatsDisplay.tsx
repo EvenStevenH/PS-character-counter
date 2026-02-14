@@ -1,6 +1,6 @@
 import type { StatsDisplayProps } from "../../types";
 
-const StatsDisplay = ({ stats, showReadingTime = false, isWordCountValid = true, isReadingTimeValid = true }: StatsDisplayProps) => {
+export default function StatsDisplay({ stats, showReadingTime = false, isWordCountValid = true, isReadingTimeValid = true }: StatsDisplayProps) {
 	return (
 		<section>
 			<ul
@@ -38,6 +38,4 @@ const StatsDisplay = ({ stats, showReadingTime = false, isWordCountValid = true,
 			</ul>
 		</section>
 	);
-};
-
-export default StatsDisplay;
+}
